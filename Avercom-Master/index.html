@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="yandex-verification" content="ed847fd963014a80" />
+    <title>«Аверком» — Частное торговое унитарное предприятие</title>
+    <meta name="keywords" content="аверком, сантехника, гродно">
+    <meta name="description" content="ЧТУП Аверком реализует оптом и в розницу запорную арматуру, инженерную сантехнику, трубы, санфаянс, измерительные приборы, отопительное оборудование и насосы.">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <style>
+
+        #videoContainers {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #myVideos {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        body {
+            padding-top: 1rem;
+            padding-left: 2rem;
+        }
+
+        .logo {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+            .logo img {
+                width: 100px;
+                height: 100px;
+                margin-right: 1rem;
+            }
+
+        .company-name {
+            font-size: 42px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .company-description {
+            font-size: 18px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .company-name::after,
+            .company-description::after {
+                content: attr(data-content);
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: textGradient 10s linear infinite;
+            }
+
+        @keyframes textGradient {
+            0% {
+                color: #FF9933;
+            }
+
+            6.67% {
+                color: #FFFF00;
+            }
+
+            13.33% {
+                color: #66FF66; 
+            }
+
+            20% {
+                color: #33CCFF; 
+            }
+
+            26.67% {
+                color: #FF3333; 
+            }
+
+            33.33% {
+                color: #FFFF00; 
+            }
+
+            40% {
+                color: #FFFF00; 
+            }
+
+            46.67% {
+                color: #00FFCC; 
+            }
+
+            53.33% {
+                color: #FF6600; 
+            }
+
+            60% {
+                color: #66FFFF; 
+            }
+
+            66.67% {
+                color: #33CCFF; 
+            }
+
+            73.33% {
+                color: #FFCC00; 
+            }
+
+            80% {
+                color: #00CC00; 
+            }
+
+            86.67% {
+                color: #FFFF00; 
+            }
+
+            93.33% {
+                color: #00FF00; 
+            }
+
+            100% {
+                color: #FF9933; 
+            }
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .address {
+            font-size: 1rem;
+        }
+
+        .working-hours {
+            font-size: 1rem;
+        }
+
+        .phone-numbers {
+            font-size: 1rem;
+        }
+
+            .address:hover,
+            .working-hours:hover,
+            .phone-numbers:hover {
+                color: dodgerblue;
+            }
+
+        .catalog {
+            width: calc(100% - 51.5rem);
+            margin-left: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .catalog__title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .divider {
+            margin-left: 1rem;
+            width: calc(33.5rem - 1rem);
+        }
+
+        .category {
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .category__title {
+            font-size: 1.1rem;
+            margin-left: 1rem;
+            position: relative;
+            width: calc(33.5rem - 1rem);
+            cursor: pointer;
+        }
+
+        .blue-line_1 {
+            width: calc(52.5%);
+            height: 2px;
+            background-color: blue;
+            margin-left: 0rem;
+            margin-top: -1rem;
+        }
+
+        .blue-line_2 {
+            width: calc(57%);
+            height: 2px;
+            background-color: blue;
+            margin-left: 0rem;
+            margin-top: -1rem;
+        }
+
+        .blue-line_3 {
+            width: calc(55%);
+            height: 2px;
+            background-color: blue;
+            margin-left: 0rem;
+            margin-top: -1rem;
+        }
+
+        .blue-line_4 {
+            width: calc(15%);
+            height: 2px;
+            background-color: blue;
+            margin-left: 0rem;
+            margin-top: -1rem;
+        }
+
+        .category__content {
+            position: absolute;
+            top: calc(100% - 3.2rem);
+            left: 34rem;
+            background-color: white;
+            padding: 0.5rem;
+            border: 1px solid grey;
+            z-index: 1;
+            display: none;
+            width: calc(21rem);
+            cursor: pointer;
+        }
+
+        .arrow {
+            position: absolute;
+            left: 31.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .categoryImage {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 3.5rem;
+        }
+
+        .category__info {
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            left: 34rem;
+            width: calc(35);
+            background-color: #ccc;
+            padding: 1rem;
+            font-size: 4rem;
+            color: white;
+            text-align: center;
+            line-height: 6rem;
+            margin-top: 4rem;
+        }
+
+        .header__menu {
+            position: relative;
+        }
+
+        .header__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 20.2rem;
+            right: 1rem;
+            left: 0rem;
+            width: calc(63rem);
+            height: 36rem;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .categories-row {
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 40px);
+            max-width: 100%;
+            margin-bottom: 0.1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+            .categories-row img {
+                width: calc(16.666% - 16px);
+                margin-bottom: 0.1rem;
+            }
+
+        .card {
+            width: 360px;
+            height: 360px;
+            border-radius: 15px;
+            padding: 1.5rem;
+            background: white;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            transition: transform 0.4s ease-out;
+            box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+        }
+
+            .card:hover {
+                transform: translateY(20px);
+            }
+
+            .card:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                background: rgba(0, 0, 0, 0.6);
+                z-index: 2;
+                transition: opacity 0.5s;
+                opacity: 0;
+            }
+
+            .card:hover:before {
+                opacity: 1;
+            }
+
+            .card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 15px;
+            }
+
+            .card .info {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.6);
+                padding: 1.5rem;
+                color: white;
+                z-index: 3;
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+
+            .card:hover .info {
+                opacity: 1;
+            }
+
+            .card .info h1,
+            .card .info p {
+                margin: 0;
+            }
+
+        .brands-row {
+            display: flex;
+            justify-content: space-between;
+            width: calc(99%);
+            max-width: 100%;
+            margin-bottom: 0.1rem;
+            margin-left: 1rem;
+        }
+
+
+            .brands-row img {
+                width: calc(16.666% - 16px);
+                margin-bottom: 0.1rem;
+            }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+            .icons > div {
+                flex: 1;
+                text-align: center;
+            }
+
+            .icons img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+
+        .container-1,
+        .container-2,
+        .container-3,
+        .container-4,
+        .container-5 {
+            margin-bottom: 20px;
+        }
+
+        p:hover {
+            color: dodgerblue;
+        }
+
+        .card-img-top {
+            transition: transform 0.3s ease;
+        }
+
+            .card-img-top:hover {
+                transform: scale(1.1);
+            }
+
+        .maincontainer {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            float: left;
+        }  
+
+        .back h2 {
+            position: absolute;
+        }
+
+        .back p {
+            position: absolute;
+            top: 0rem;
+            font-size: 15px;
+        }
+
+        .front h2 {
+            position: absolute;
+            padding: 10px;
+            top: 140px;
+            color: #000;
+        }
+
+        .front img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .maincontainer > .front {
+            position: absolute;
+            transform: perspective(600px) rotateY(0deg);
+            width: 200px;
+            height: 200px;
+            backface-visibility: hidden;
+            transition: transform .5s linear 0s;
+        }
+
+        .maincontainer > .back {
+            position: absolute;
+            transform: perspective(600px) rotateY(180deg);
+            background: white;
+            color: black;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            backface-visibility: hidden;
+            transition: transform .5s linear 0s;
+        }
+
+        .maincontainer:hover > .front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+
+        .maincontainer:hover > .back {
+            transform: perspective(600px) rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+
+  <div id="videoContainers">
+    <video autoplay muted loop id="myVideos">
+        <track kind="captions" src="Video/background-en.vtt" srclang="en" label="English">
+        <track kind="captions" src="Video/background-fr.vtt" srclang="fr" label="French">
+        <track kind="description" src="Video/background-en.vtt" srclang="en" label="English">
+        <track kind="description" src="Video/background-fr.vtt" srclang="fr" label="French">
+        <source src="background.mov" type="video/mp4">
+    </video>
+</div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="logo" style="margin-bottom: 1rem; display: flex; align-items: center;">
+            <img src="pic.png" alt="Logo">
+            <div style="margin-left: 0.5rem;">
+                <div class="company-name" data-content="АВЕРКОМ">АВЕРКОМ</div>
+                <div class="company-description" data-content="ЧАСТНОЕ ТОРГОВОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ">ЧАСТНОЕ ТОРГОВОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ</div>
+            </div>
+        </div>
+
+    <div style="display: flex; flex-grow: 1; justify-content: center; margin-left: 2rem;">
+        <div class="contact-info" style="text-align: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;">
+                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                    <img src="location.png" alt="Address Icon" style="margin-right: 0.5rem;">
+                    <a href="https://yandex.ru/maps/?text=Гаспадарчая ул., 22 (офис 7)" style="font-size: 1.25rem; cursor: pointer;">г.Гродно, ул.Гаспадарчая, 22/3, офис 7, этаж 1</a>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img src="time.png" alt="Working Hours Icon" style="margin-right: 0.5rem;">
+                    <div class="working-hours" style="font-size: 1.25rem;">Пн-Пт: с 8.30 до 16.30 Сб-Вс: Выходной</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="phone-info" style="display: flex; align-items: center; margin-right: 1.5rem; margin-left: auto;">
+            <img src="Phone.png" alt="Phone Icon" style="margin-right: 1.5rem;">
+            <div class="phone-numbers" style="font-size: 1.25rem;">
+                <a href="tel:+375152557770">+375 (152) 55-777-0</a><br>
+                <a href="tel:+375152557771">+375 (152) 55-777-1</a><br>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br />
+
+    <div class="header__menu">
+        <nav class="header__nav" aria-label="Main Menu">
+            <div class="catalog">
+                <div class="catalog__title">
+                    <p>Каталог сантехнических товаров</p>
+                </div>
+                <div class="blue-line_1"></div>
+                <div class="category__info">
+                    <div class="background-image"></div>
+                    <div class="category__text">
+                        <span style="font-size: 50px; text-transform: uppercase;">
+                            ОПТОВАЯ И<br>
+                            РОЗНИЧНАЯ ТОРГОВЛЯ<br>
+                            ИНЖЕНЕРНОЙ САНТЕХНИКОЙ
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Радиаторы и комплектующие</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" id="radiatorContent">
+            <p>Алюминиевые и биметаллические радиаторы</p>
+            <p>Радиаторная арматура и термоголовки</p>
+            <p>Стальные радиаторы и комплектующие</p>
+            <p>Чугунные радиаторы и комплектующие</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Насосы</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" id="pumpsContent" style="display: none;">
+            <p>Канализационные и дренажные насосы</p>
+            <p>Насосы для водоснабжения</p>
+            <p>Насосы повышения давления</p>
+            <p>Скважинные насосы</p>
+            <p>Циркуляционные насосы</p>
+            <p>Принадлежности для насосов</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Системы для отопления и внутреннего водоснабжения</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Крепеж и оснастка</p>
+            <p>Распределительные коллекторы и шкафы</p>
+            <p>Трубы защитные гофрированные</p>
+            <p>Трубы и фитинги из нержавеющей и оцинкованной стали</p>
+            <p>Трубы из полипропилена и фитинги</p>
+            <p>Трубы из сшитого полиэтилена и фитинги</p>
+            <p>Трубы металлопластиковые и фитинги</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Трубы канализационные, фасонные части и комплектующие</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Внутренняя канализация</p>
+            <p>Водосточные системы</p>
+            <p>Ливневая канализация</p>
+            <p>Наружная канализация</p>
+            <p>Трапы канализационные</p>
+            <p>Трубы хризотилцементные (АЦ) и фасонные части</p>
+            <p>Трубы чугунные для канализации и фасонные части</p>
+            <p>Смазка сантехническая</p>
+            <p>Линейные водоотводы</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Трубы стальные и металлопрокат</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Металопрокат</p>
+            <p>Трубы стальные ВГП</p>
+            <p>Трубы стальные ВГП оцинкованные</p>
+            <p>Трубы стальные электросварные</p>
+            <p>Трубы стальные электросварные оцинкованные</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Запорная арматура и фильтры</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Вентили</p>
+            <p>Задвижки</p>
+            <p>Затворы</p>
+            <p>Клапаны</p>
+            <p>Краны</p>
+            <p>Фильтры</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Сантехника</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Ванны</p>
+            <p>Водоотводящие желобы и трапы</p>
+            <p>Гибкая подводка</p>
+            <p>Краны сантехнические</p>
+            <p>Мойки</p>
+            <p>Писсуары и биде</p>
+            <p>Поддоны душевые</p>
+            <p>Полотенцесушители</p>
+            <p>Системы защиты от протечек</p>
+            <p>Сифоны</p>
+            <p>Смесители и комплектующие</p>
+            <p>Умывальники и комплектующие</p>
+            <p>Унитазы и комплектующие</p>
+            <p>Шланги для стиральных машин</p>
+            <p>Тросы сантехнические</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Приборы учета и КИП</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Манометры и комплектующие</p>
+            <p>Счетчики и комплектующие</p>
+            <p>Теплосчетчики</p>
+            <p>Термоманометры</p>
+            <p>Термометры и комплектующие</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Детали трубопроводов, фитинги</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Детали трубопроводов стальные</p>
+            <p>Компенсаторы</p>
+            <p>Фитинги бронзовые</p>
+            <p>Фитинги латунные</p>
+            <p>Фитинги стальные</p>
+            <p>Фитинги чугунные</p>
+            <p>Фитинги чугунные зажимные</p>
+            <p>Фланцы</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Элементы для крепления, метизы</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Крепёжные системы</p>
+            <p>Метизы</p>
+            <p>Перфорированный крепеж</p>
+            <p>Хомуты для водопроводных труб из пластика</p>
+            <p>Хомуты для труб ПВХ</p>
+            <p>Хомуты металлические оцинкованные с уплотнением</p>
+            <p>Хомуты червячные</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Наружное водоснабжение</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Клеевые системы НПВХ</p>
+            <p>Водоочистка</p>
+            <p>Люки, дождеприемники и ЖБИ</p>
+            <p>Опоры скользящие</p>
+            <p>Трубы НПВХ напорные для водоснабжения</p>
+            <p>Трубы полиэтиленовые и фасонные части</p>
+            <p>Трубы чугунные ВЧШГ и фасонные части</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Теплоизоляция и уплотнительные материалы</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Аккустическая изоляция</p>
+            <p>Лен сантехнический</p>
+            <p>Лента фум, нить и паста уплотнительная</p>
+            <p>Набивка сальниковая, каболка и шнур асбестоцементный</p>
+            <p>Паронит и техпластины</p>
+            <p>Прокладки уплотнительные</p>
+            <p>Сопутствующие товары для теплоизоляции</p>
+            <p>Теплоизоляция из вспененого полиэтилена</p>
+            <p>Теплоизоляция из минеральной ваты</p>
+            <p>Технические ткани</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Прочие сопутствующие товары и спецодежда</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Пены, герметики, грунтовки, клей</p>
+            <p>Спецодежда</p>
+            <p>Системы для хранения инструментов</p>
+            <p>Проволока вязальная</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Балансировочная, регулирующая и предохранительная арматура</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Воздухоотводчики</p>
+            <p>Клапаны cмесительные</p>
+            <p>Клапаны автоматической подпитки</p>
+            <p>Клапаны балансировочные</p>
+            <p>Клапаны предохранительные</p>
+            <p>Клапаны регулирующие двухходовые</p>
+            <p>Клапаны регулирующие трехходовые</p>
+            <p>Клапаны электромагнитные (соленоидные)</p>
+            <p>Конденсатоотводчики</p>
+            <p>Регуляторы давления</p>
+            <p>Регуляторы перепада давления воды</p>
+            <p>Регуляторы температуры</p>
+            <p>Редукторы давления</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="category">
+        <div class="category__title bg-primary text-white" onclick="toggleCategory(this)">
+            <p>Тёплый пол</p>
+            <span class="arrow">►</span>
+        </div>
+        <div class="category__content" style="display: none;">
+            <p>Автоматика для теплого пола</p>
+            <p>Оснастка для теплого пола</p>
+            <p>Распределительные коллекторы и комплектующие для теплового пола</p>
+            <p>Термостатика для тёплого пола</p>
+            <p>Трубы для тёплого пола</p>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="header__menu">
+    <nav class="header__nav" aria-label="Main Menu">
+            <div class="catalog">
+                <div class="catalog__title">
+                    <p>Категории сантехнических товаров</p>
+                </div>
+                <div class="blue-line_2"></div>
+            </div>
+        </nav>
+    </div>
+    <br />
+
+    <div class="row mb-4 offset-md-0">
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="radiator.png" class="card-img-top" alt="radiator">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Радиаторы</h1>
+                        <p>Играют важную роль в системах отопления, обеспечивая эффективное распределение тепла и комфортный климат в помещениях.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="nasos.png" class="card-img-top" alt="nasos">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Насосы</h1>
+                        <p>Обеспечивают эффективное перемещение жидкостей или газовых сред, играя важную роль в различных инженерных системах.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="polipropilen.png" class="card-img-top" alt="polipropilen">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Системы отопления</h1>
+                        <p>Обеспечивают комфорт и удобство в жилых и коммерческих помещениях, обеспечивая поддержание оптимальной температуры.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="kanaliz.png" class="card-img-top" alt="kanaliz">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Канализа ционные трубы</h1>
+                        <p>Играют важную роль в обеспечении эффективной работы систем канализации, обеспечивая надежное отведение сточных вод.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 offset-md-0">
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="stal.png" class="card-img-top" alt="Металлопрокат">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Металлопрокат</h1>
+                        <p>Широко применяется в различных отраслях, включая строительство, производство и инфраструктурные проекты.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="zaporn.png" class="card-img-top" alt="Фильтры">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Фильтры</h1>
+                        <p>Обеспечивают надежную регулировку потока воды и защиту от примесей, обеспечивая безопасность и качество воды.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="sanfains.png" class="card-img-top" alt="Санфаянс">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Санфаянс</h1>
+                        <p>Важная часть любого здания, обеспечивающая комфорт и гигиеничность благодаря функционированию санитарно-технических приборов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="manometr.png" class="card-img-top" alt="КИП">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>КИП</h1>
+                        <p>Обеспечивают точное и эффективное мониторинговые данные о потреблении энергии и других ресурсов, что позволяет оптимизировать процессы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 offset-md-0">
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="otvod.png" class="card-img-top" alt="Фитинги">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Фитинги</h1>
+                        <p>Необходимы для обеспечения надежности трубопроводных систем и эффективного функционирования санитарно-технических систем.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="ktr.png" class="card-img-top" alt="Крепёж">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Крепёж</h1>
+                        <p>Неотъемлем в строительстве, предоставляя надежное соединение и крепление различных конструкций.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="trubvoda.png" class="card-img-top" alt="Наружные сети">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Наружные сети</h1>
+                        <p>Необходимы для обеспечения надежной подачи чистой питьевой воды в дома и здания.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="izolia.png" class="card-img-top" alt="Теплоизоляция">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Теплоизоляция</h1>
+                        <p>Необходима для создания эффективной тепловой и звукоизоляции в зданиях, обеспечивая комфортную и экологически безопасную обстановку для проживания и работы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 offset-md-0">
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="perchatki.png" class="card-img-top" alt="Прочие товары">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Прочие товары</h1>
+                        <p>Дополняют ассортимент продукции, обеспечивая полноценное функционирование систем отопления и водоснабжения, а также комфорт и безопасность.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="armatura.png" class="card-img-top" alt="Регулирующая арматура">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Регулирующая арматура</h1>
+                        <p>Играет важную роль в обеспечении оптимальной работы систем отопления и водоснабжения, обеспечивая эффективное распределение потока жидкости.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="teplo.png" class="card-img-top" alt="Теплый пол">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Тёплый пол</h1>
+                        <p>Является инновационной системой обогрева, обеспечивающей равномерное распределение тепла по всей площади помещения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <img src="electrod.png" class="card-img-top" alt="Электроды">
+                <div class="card-body">
+                    <div class="info">
+                        <h1>Электроды</h1>
+                        <p>Используются для сварки металлических конструкций, обеспечивая прочное и надежное соединение элементов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header__menu">
+        <nav class="header__nav" aria-label="Main Menu">
+            <div class="catalog">
+                <div class="catalog__title">
+                    <p>Бренды с которыми мы работаем</p>
+                </div>
+                <div class="blue-line_3"></div>
+            </div>
+        </nav>
+    </div>
+
+    <br>
+
+    <div class="brands-row">
+        <div class="maincontainer">
+            <div class="back">
+                <p>Ведущий производитель трубопроводных систем с более чем столетней историей, предлагающий инновационные решения высокого качества для отопления, вентиляции и сантехники.</p>
+            </div>
+            <div class="front">
+                <img src="ostendorf.png" alt="ostendorf">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Компания, специализирующаяся на производстве качественных строительных материалов и систем отопления, предлагающая инновационные решения в промышленном строительстве.</p>
+            </div>
+            <div class="front">
+                <img src="firat.png" alt="firat">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Ведущая мировая компания в области проектирования и производства систем отопления, вентиляции и кондиционирования воздуха.</p>
+            </div>
+            <div class="front">
+                <img src="giacomini.png" alt="giacomini">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Международная компания, специализирующаяся на производстве бытовой и профессиональной техники, известная своими инновационными решениями для улучшения защиты окружающей среды.</p>
+            </div>
+            <div class="front">
+                <img src="electrolux.png" alt="electrolux">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Ведущая мировая компания в области насосных систем и технологий водоотведения, предоставляющая инновационные и эффективные решения для устойчивого управления водными ресурсами.</p>
+            </div>
+            <div class="front">
+                <img src="wilo.png" alt="wilo">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Ведущая мировая компания, предлагающая инновационные технологические решения в области автомобильного оборудования, бытовой техники и энергетики.</p>
+            </div>
+            <div class="front">
+                <img src="bosch.png" alt="bosch">
+            </div>
+        </div>
+    </div>
+
+    <div class="brands-row">
+        <div class="maincontainer">
+            <div class="back">
+                <p>Компания, специализирующаяся на производстве высококачественных клапанов и арматуры для широкого спектра промышленных и коммерческих приложений.</p>
+            </div>
+            <div class="front">
+                <img src="valfex.png" alt="valfex">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Компания, специализирующаяся на создании инновационных решений в области технологий энергосбережения и экологически чистых систем в сфере энергетики.</p>
+            </div>
+            <div class="front">
+                <img src="evan.jpg" alt="evan">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Инновационная компания, специализирующаяся на разработке и производстве упаковочных решений высокого качества, ориентированных на потребности современного рынка.</p>
+            </div>
+            <div class="front">
+                <img src="unipak.png" alt="unipak">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Компания, специализирующаяся на разработке и производстве высокоточных приборов учета и управления энергоресурсами.</p>
+            </div>
+            <div class="front">
+                <img src="zenner.jpg" alt="zenner">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Компания специализируется на производстве инновационных решений в области энергетики, обеспечивая надежные и эффективные технологии для устойчивого развития.</p>
+            </div>
+            <div class="front">
+                <img src="wester.png" alt="wester">
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="back">
+                <p>Ведущая компания, специализирующаяся на инновационных решениях в области отопления, кондиционирования воздуха и энергосбережения.</p>
+            </div>
+            <div class="front">
+                <img src="ferroli.png" alt="ferroli">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="header__menu">
+        <nav class="header__nav" aria-label="Main Menu">
+            <div class="catalog">
+                <div class="catalog__title">
+                    <p>Контакты</p>
+                </div>
+                <div class="blue-line_4"></div>
+            </div>
+        </nav>
+    </div>
+
+    <br>
+
+    <div style="margin-top: 0.5rem; border: 0.0625px solid grey; padding: 1rem; margin-left: 1rem; margin-right: 70rem; position: relative;">
+      <p style="margin-top: 1rem; font-weight: bold;">Юридический адрес:</p>
+      <a href="https://yandex.ru/maps/?text=Гаспадарчая ул., 22 (офис 7)">г.Гродно, ул.Гаспадарчая, 22/3, офис 7, этаж 1</a><br>
+      <a href="https://yandex.ru/maps/?text=Гаспадарчая ул., 22 (офис 7)">Здание "Бригантина" (центральный вход)</a>
+  
+      <p style="margin-top: 1rem; font-weight: bold;">Телефоны:</p>
+      <p style="margin-top: 0.1rem; ">
+          <a href="tel:+375152557770">+375 (152) 55-777-0</a><br>
+          <a href="tel:+375152557771">+375 (152) 55-777-1</a><br>
+          <a href="tel:+375295864148">+375 (29) 586-41-48</a><br>
+          <a href="tel:+375292800247">+375 (29) 28-00-247</a><br>
+      </p>
+      <p style="margin-top: 1rem; font-weight: bold;">Email:</p>
+      <p style="margin-top: 0.1rem;"><a href="mailto:averkom-svarka@mail.ru">averkom-svarka@mail.ru</a></p>
+      <p style="margin-top: 1rem; font-weight: bold;">Мы работаем:</p>
+      <p style="margin-top: 0.1rem;">Пн-Пт: с 8.30 до 16.30 Сб-Вс: Выходной</p>
+      <div class="image-container">
+          <img src="map.png" class="card-img-top" style="margin-left: 26rem; width: 68.5rem; height: 29rem; position: absolute; top: 0rem; margin-right: 0rem " alt="map">
+          <div class="magnifier"></div>
+      </div>
+  </div>
+    <br />
+    <div style="display: flex; flex-direction: column; align-items: center; margin-left: 0rem;">
+        <p style="font-weight: bold; font-style: italic; margin: 0;">Аккредитованный участник ОАО «Белорусcкой универсальной товарной биржи»</p>
+        <img src="birga.png" style="margin-top: 2rem;" alt="birga">
+    </div>
+    <div class="icons">
+        <div class="container-1">
+            <img class="frame-1" src="zashchita.png" alt="zashchita"/>
+            <div class="container-1">
+                Все товары имеют официальную гарантию производителя
+            </div>
+        </div>
+        <div class="container-2">
+            <img class="frame-2" src="tovary.png" alt="tovary"/>
+            <div class="container-2">
+                Более 10 000 товаров
+            </div>
+        </div>
+        <div class="container-3">
+            <img class="frame-3" src="oplata.png" alt="oplata"/>
+            <div class="container-3">
+                Любой способ оплаты
+            </div>
+        </div>
+        <div class="container-4">
+            <img class="frame-4" src="kontrol.png" alt="kontrol"/>
+            <div class="container-4">
+                Высокие оценки клиентов
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <p style="font-weight: bold; margin-left: 1rem; margin-top: 0; margin-bottom: 0;">ЧТУП «Аверком»</p>
+    <p style="margin-left: 1rem; margin-top: 0; margin-bottom: 0;">УНП 590886923</p>
+    <br />
+    <p style="font-weight: bold; margin-left: 1rem;">Адрес склада: <span style="display: inline; font-weight: normal;"><a href="https://yandex.ru/maps/?text=Гаспадарчая ул., 12/7">г.Гродно, ул. Гаспадарчая, д. 12</a></span></p>
+    <p style="margin-top: 0.5rem; font-weight: bold; margin-left: 1rem;">Директор: <span style="display: inline; font-weight: normal;">Аверук Анна Константиновна</span></p>
+
+    <script>
+        window.onload = function () {
+
+            const categoryTitles = document.querySelectorAll('.category__title');
+            categoryTitles.forEach((title) => {
+                title.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const arrow = this.querySelector('.arrow');
+                    const allContents = document.querySelectorAll('.category__content');
+
+                    // Проверяем, была ли текущая категория развернута
+                    const isOpen = content.style.display === 'block';
+
+                    // Скрываем все содержимое категорий и меняем стрелки на '►' (вправо)
+                    allContents.forEach((item) => {
+                        item.style.display = 'none';
+                    });
+                    categoryTitles.forEach((item) => {
+                        item.querySelector('.arrow').innerHTML = '►'; // Стрелка вправо
+                        item.style.border = 'none'; // Убираем границу у всех категорий
+                    });
+
+                    // Переключаем видимость содержимого текущей категории
+                    if (!isOpen) {
+                        content.style.display = 'block';
+                        arrow.innerHTML = '◄'; // Стрелка влево
+                        arrow.style.left = '30.5rem'; // Сдвигаем стрелку на пол отступа влево
+                        this.style.border = '5px solid blue'; // Добавляем границу голубого цвета
+                    } else {
+                        content.style.display = 'none';
+                        arrow.innerHTML = '►'; // Стрелка вправо
+                        arrow.style.left = '31.5rem'; // Возвращаем стрелку на исходное положение
+                        this.style.border = 'none'; // Убираем границу
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
